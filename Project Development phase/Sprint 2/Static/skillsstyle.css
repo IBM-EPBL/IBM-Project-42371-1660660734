@@ -1,0 +1,68 @@
+body{
+    background-size: auto;
+    background-image: linear-gradient(to right bottom,#eeeaed,#eed6f5,#ac9ad6,#6b83e0,#309df0);
+    background-repeat: no-repeat;
+    height: 150vh;
+}
+*{   font-family: "Poppins";    }
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    margin: 0%;
+    margin-left: 30px;
+    display: inline;
+    float: left;
+}
+li a{
+    display: block;
+  color: hsl(0, 100%, 99%);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: black;
+  border-radius: 8px;
+  margin-left: 200px;
+  letter-spacing: 3px;
+
+}
+.two{
+    letter-spacing: 5px;
+    font-size: 35px;
+    
+
+}
+div.course {
+    width: 300px;
+    height: 300px;
+    
+    border: 1px solid transparent;
+    position: absolute;
+    top: 200px;
+    left:50px;
+  }
+  
+  div.course2 {
+    width: 300px;
+    height: 300px;
+    
+    border: 1px solid transparent;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+  }
+  
+  div.course3 {
+    width: 300px;
+    height: 300px;
+    
+    border: 1px solid transparent;
+    position: absolute;
+    top: 200px;
+    left: 950px;
+  }
+  

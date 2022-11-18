@@ -1,0 +1,48 @@
+body{
+    background-size: auto;
+    background-image: linear-gradient(to right bottom,#eeeaed,#eed6f5,#ac9ad6,#6b83e0,#309df0);
+    background-repeat: no-repeat;
+    height: 150vh;
+    
+}
+*{   font-family: "Poppins";    }
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0;
+    overflow: hidden;
+}
+li{
+    margin: 0%;
+    margin-left: 30px;
+    display: inline;
+    float: left;
+
+}
+li a{
+    display: block;
+  color: hsl(0, 100%, 99%);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(10, 0, 0);
+  border-radius: 8px;
+  /*margin-left: 100px;*/
+  letter-spacing: 3px;
+  margin-left:1%
+
+}
+ .two{
+    letter-spacing: 5px;
+    font-size: 35px;
+    
+
+}
+.app{
+    margin-top: -10px;
+}
+
+.image{
+    padding: 5%;
+}

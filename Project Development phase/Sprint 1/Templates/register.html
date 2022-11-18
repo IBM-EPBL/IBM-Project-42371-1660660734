@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Registration page</title>
+        <link rel="stylesheet" href="static/registerstyle.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    </head>
+    <body>
+        <header>
+        
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">SKILL/JOB RECOMMENDER</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+                      <a class="nav-link" href="{{url_for('register')}}">Register</a>
+                      <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                      <a class="nav-link" href="{{url_for('skills')}}">Skills</a>
+                      <a class="nav-link" href="{{url_for('about')}}">About us</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </nav>
+    </header>
+        
+        <div class="container">
+        <form action="/register" method="POST">
+            <br>
+            <h2>Registration</h2>
+            <label class="form_label"for="email"><b>Email ID</b></label><br><br>
+            <input class="form_input"type="email" name="email"/><br><br>
+            <label class="form_label"for="user"><b>Username</b></label><br><br>
+            <input class="form_input"type="text" name= "username" /><br><br>
+            <label class="form_label"for="psw"><b>Password</b></label><br><br>
+            <input class="form_input"type="password" name="password"/><br><br>
+            <label class="form_label"for="pho"><b> Enter Phone number:</b></label><br><br>
+            <input class="form_input"type="number" name="phonenumber"/><br><br>
+            <label class="form_label"for="pho"><b> Enter four digit pin:</b></label><br><br>
+            <input class="form_input"type="password" name="pin"/>
+            </br></br></br>
+           <center> {% if error %}  
+        <p><strong style="color:red">Error</strong>: {{error}}</p>  
+    {% endif %} 
+    {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p style="color:green">{{ message }}</p>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} </center>
+            <center><input type="submit" class="submitbtn" value="submit"/></center>
+            <center><p>Already have a account <a href="{{url_for('login')}}">Sign in</a></p></center>
+        </form>
+        </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+    </body>
+</html>
