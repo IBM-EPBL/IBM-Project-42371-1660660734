@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recommender</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='welcomestyle.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "65c01ed6-9fc1-4883-979a-3676279ebe44", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "8fcd017f-a192-420a-aafc-18cb0330efca", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</head>
+<body>
+    <header>
+      
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SKILL/JOB RECOMMENDER</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+                  <a class="nav-link" href="{{url_for('register')}}">Register</a>
+                  <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                  <a class="nav-link" href="{{url_for('skills')}}">Skills</a>
+                  <a class="nav-link" href="{{url_for('about')}}">About us</a>
+                  
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <br>
+    <section id="sss1">
+        <center><h1 class="two" >Job Recommender</h1></center>
+    </section>
+    <br><br>
+    <div id="jobs">
+		
+		<center><h2 class="app">APPLY JOBS</h2></center><br>
+        <div class="image">
+        <img style="position:absolute;top: 250px;"src="{{url_for('static',filename='img/php.jpg')}}" alt=""width="330" height="200">
+        <img style="position:absolute;top: 600px;"src="{{url_for('static',filename='img/python.jpg')}}" alt=""width="330" height="200">
+        <img style="position:absolute;top: 250px;left: 540px;"src="{{url_for('static',filename='img/software.jpg')}}" alt=""width="330" height="200">
+        <img style="position:absolute;top: 600px;left: 540px;"src="{{url_for('static',filename='img/java.jpg')}}" alt=""width="330" height="200">
+		<img style="position:absolute;top: 250px;left: 1050px;"src="{{url_for('static',filename='img/web.jpg')}}" alt=""width="330" height="200">
+        <img style="position:absolute;top: 600px;left: 1050px;"src="{{url_for('static',filename='img/sql.jpg')}}" alt=""width="330" height="200">
+        <ul>	
+            <li><a href="https://in.indeed.com/PHP-Developer-jobs?vjk=10cca9575b193c7d" style="position:absolute;top: 500px;left:80px;">APPLY</a></li>	
+            <li><a href="https://in.indeed.com/Software-Developer-jobs?vjk=b7da08f07cac87d5" style="position:absolute;top: 500px;left:650px">APPLY</a></li>
+            <li><a href="https://in.indeed.com/Web-Developer-jobs?vjk=b81e49165da51eeb" style="position:absolute;top: 500px;left:1200px">APPLY</a></li>
+            <li><a href="https://in.indeed.com/SQL-Developer-jobs?vjk=ac86b15908022123" style="position:absolute;top: 850px;left:1200px">APPLY</a></li>
+            <li><a href="https://in.indeed.com/Java-Developer-jobs?vjk=da306a665e00eb30" style="position:absolute;top: 850px;left:650px">APPLY</a></li>
+            <li><a href="https://in.indeed.com/Python-Developer-jobs?vjk=fa7b9bd250044569" style="position:absolute;top: 850px;left:80px">APPLY</a></li>
+		<!--<h2 style="position:absolute;top: 450px;left:100px"><a href="https://in.indeed.com/PHP-Developer-jobs?vjk=10cca9575b193c7d">APPLY</a></li></h2>
+        <h2 style="position:absolute;top: 450px;left:700px"><a href="https://in.indeed.com/Software-Developer-jobs?vjk=b7da08f07cac87d5">APPLY</a></h2>
+        <h2 style="position:absolute;top: 450px;left:1200px"><a href="https://in.indeed.com/Web-Developer-jobs?vjk=b81e49165da51eeb">APPLY</a></h2>
+        <h2 style="position:absolute;top: 800px;left:1200px"><a href="https://in.indeed.com/SQL-Developer-jobs?vjk=ac86b15908022123">APPLY</a></h2>
+        <h2 style="position:absolute;top: 800px;left:700px"><a href="https://in.indeed.com/Java-Developer-jobs?vjk=da306a665e00eb30">APPLY</a></h2>
+        <h2 style="position:absolute;top: 800px;left:150px"><a href="https://in.indeed.com/Python-Developer-jobs?vjk=fa7b9bd250044569">APPLY</a></h2>-->
+        </ul>
+        </div>
+    </div>  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>                     
